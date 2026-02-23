@@ -21,20 +21,20 @@ odi-learning/
 ## Ogrenme Yol Haritasi
 
 ### Seviye 1 - Temel (Hafta 1-2)
-- [ ] ODI mimarisini anla (Master/Work Repository, Agent, Studio)
-- [ ] ODI Studio kurulumu yap
-- [ ] Repository olustur ve baglan
-- [ ] ODI Studio arayuzunu tanı (Designer, Operator, Topology, Security)
+- [x] ODI mimarisini anla (Master/Work Repository, Agent, Studio)
+- [x] ODI Studio kurulumu yap
+- [x] Repository olustur ve baglan
+- [x] ODI Studio arayuzunu tanı (Designer, Operator, Topology, Security)
 
 ### Seviye 2 - Topoloji ve Modelleme (Hafta 3-4)
-- [ ] Fiziksel ve mantiksal topoloji tanimla
-- [ ] Veri sunucusu (Data Server) ekle
-- [ ] Fiziksel ve mantiksal semalar olustur
-- [ ] Reverse Engineering ile model olustur
-- [ ] Veri deposu (Datastore) kavramini ogren
+- [x] Fiziksel ve mantiksal topoloji tanimla
+- [x] Veri sunucusu (Data Server) ekle
+- [x] Fiziksel ve mantiksal semalar olustur
+- [x] Reverse Engineering ile model olustur
+- [x] Veri deposu (Datastore) kavramini ogren
 
 ### Seviye 3 - Mapping ve Donusum (Hafta 5-7)
-- [ ] Basit bir kaynak-hedef mapping olustur
+- [x] Basit bir kaynak-hedef mapping olustur
 - [ ] Filter, Join, Lookup, Aggregate komponentlerini ogren
 - [ ] Expression Editor ile donusum kurallari yaz
 - [ ] Farkli Knowledge Module'leri dene (IKM, LKM)

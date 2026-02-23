@@ -52,4 +52,8 @@ kurumsal bir ETL/ELT aracidir.
 
 ## Notlarim
 
-> Buraya ogrendikce kendi notlarini ekle...
+- ODI Studio'da 4 Navigator var: Designer (gelistirme), Operator (izleme), Topology (baglantilar), Security (kullanicilar)
+- Mapping calistirirken Context: Global, Agent: Local (No Agent) secilir
+- Operator Navigator'daki Steps gorunumu hata ayiklamanin en onemli araci
+- Knowledge Module'ler projeye import edilmeden kullanilamaz
+- CSV dosyalarinin Record Separator ayari (LF/CRLF) cok onemli — dosya formatiyla eslesmelidir

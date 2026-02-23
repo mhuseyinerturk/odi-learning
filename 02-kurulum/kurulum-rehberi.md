@@ -68,11 +68,24 @@ GRANT CONNECT, RESOURCE, DBA TO ODI_REPO_WORK;
 - Master/Work Repository bilgilerini gir
 
 ## Kurulum Sonrasi Kontrol Listesi
-- [ ] JDK 8 kuruldu ve JAVA_HOME ayarlandi
-- [ ] Oracle Database (veya XE) kuruldu ve calisiyor
-- [ ] ODI 12c kurulumu tamamlandi
-- [ ] RCU ile repository semalari olusturuldu
-- [ ] ODI Studio aciliyor ve repository'e baglanabiliyor
+- [x] JDK 8 kuruldu ve JAVA_HOME ayarlandi (C:\Java\jdk1.8.0_202)
+- [x] Oracle Database 19c kuruldu ve calisiyor (ORCL / ORCLPDB)
+- [x] ODI 12c (12.2.1.4) kurulumu tamamlandi (C:\Oracle\Middleware\Oracle_Home)
+- [x] RCU ile repository semalari olusturuldu (prefix: DEV)
+- [x] ODI Studio aciliyor ve repository'e baglanabiliyor (SUPERVISOR / WORKREP)
+
+## Gercek Kurulum Bilgileri
+
+| Bilesen | Deger |
+|---------|-------|
+| JAVA_HOME | C:\Java\jdk1.8.0_202 |
+| ORACLE_HOME (DB) | C:\Oracle19c |
+| ORACLE_HOME (ODI) | C:\Oracle\Middleware\Oracle_Home |
+| Database | Oracle 19c Enterprise Edition |
+| PDB | ORCLPDB |
+| ODI Version | 12.2.1.4.0 |
+| Repository Prefix | DEV |
+| Work Repository | WORKREP (Development) |
 
 ## Olasi Sorunlar ve Cozumleri
 
@@ -81,7 +94,13 @@ GRANT CONNECT, RESOURCE, DBA TO ODI_REPO_WORK;
 | ODI Studio acilmiyor | JAVA_HOME'un JDK 8'i gosterdiginden emin ol |
 | Repository baglanti hatasi | DB'nin calistigini ve kullanici/sifrenin dogru oldugunu kontrol et |
 | Bellek hatasi | ODI Studio'nun JVM parametrelerini artir (odi.conf dosyasi) |
+| RCU "Unknown Encryption Algorithm" | sqlnet.ora'ya uyumlu encryption tipleri ekle (AES128, RC4_128) |
+| RCU rcu.bat "syntax error" | rcu.bat yerine dogrudan rcu_internal.bat kullan |
+| PDB acik degil hatasi | ALTER PLUGGABLE DATABASE ORCLPDB OPEN; ve SAVE STATE; calistir |
+| CSV verisi yuklenmiyor (0 satir) | Record Separator'un dosya formatiyla eslestiginden emin ol (LF vs CRLF) |
 
 ## Notlarim
 
-> Kurulum sirasinda karsilastigin sorunlari ve cozumlerini buraya yaz...
+- RCU silent modda calistirildi: -variables ODI_SUPERVISOR_PASSWORD, ODI_WORK_REP_NAME, ODI_WORK_REP_TYPE parametreleri gerekli
+- PDB her DB restart'ta kapanabilir, SAVE STATE ile kalici acik tutulur
+- rcu.bat'taki WLS_ORACLE_HOME bos olunca syntax error verir, rcu_internal.bat tercih et
