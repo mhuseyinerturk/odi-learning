@@ -22,4 +22,15 @@
 
 ## Proje Notlarim
 
-> Her projeyi tamamladikca notlarini ve ciktilarini buraya ekle...
+### Proje 1 - TAMAMLANDI (23 Subat 2026)
+- CSV'den Oracle'a 10 calisan kaydi yuklendi
+- KM: LKM File to SQL + IKM SQL Control Append
+- Dosya: 10-projeler/proje1/
+
+### Proje 2 - TAMAMLANDI (27 Subat 2026)
+- 2 kaynak tablo (CALISANLAR2 + DEPARTMANLAR) JOIN ile birlestirildi
+- FILTER ile maas > 5000 filtresi uygulandi
+- Expression ile AD_SOYAD birlestirme ve MAAS_SEVIYE hesaplama yapildi
+- 20 kaynaktan 15 kayit hedef tabloya yuklendi
+- KM: IKM SQL Control Append (ayni DB, LKM gerek yok)
+- Dosya: 10-projeler/proje2/

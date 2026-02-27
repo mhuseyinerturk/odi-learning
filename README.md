@@ -35,9 +35,9 @@ odi-learning/
 
 ### Seviye 3 - Mapping ve Donusum (Hafta 5-7)
 - [x] Basit bir kaynak-hedef mapping olustur
-- [ ] Filter, Join, Lookup, Aggregate komponentlerini ogren
-- [ ] Expression Editor ile donusum kurallari yaz
-- [ ] Farkli Knowledge Module'leri dene (IKM, LKM)
+- [x] Filter, Join, Lookup, Aggregate komponentlerini ogren
+- [x] Expression Editor ile donusum kurallari yaz
+- [x] Farkli Knowledge Module'leri dene (IKM, LKM)
 - [ ] Hata yonetimi ve veri kalite kontrolu (CKM)
 
 ### Seviye 4 - Is Akislari (Hafta 8-9)

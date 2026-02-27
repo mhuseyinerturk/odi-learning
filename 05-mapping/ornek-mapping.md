@@ -98,4 +98,29 @@ Mapping calistirirken secilecek KM, verinin nasil tasinacagini belirler:
 
 ## Notlarim
 
-> Olusturdugum mapping'lerin notlarini buraya ekle...
+### Proje 1: MAP_CSV_TO_ORACLE (23 Subat 2026)
+- **Kaynak:** CSV dosyasi (calisanlar.csv) - 10 kayit
+- **Hedef:** CALISANLAR tablosu (Oracle)
+- **KM:** LKM File to SQL + IKM SQL Control Append
+- **Sonuc:** 10 satir basariyla yuklendi
+- **Ogrenilenler:**
+  - CSV dosyasi CRLF formatinda olmali (LF ile 0 satir yuklendi)
+  - EKM degil, IKM+LKM secilmeli
+  - File Topology ayarlarinda Record Separator = "\r\n" olmali
+
+### Proje 2: MAP_CALISAN_RAPOR (27 Subat 2026)
+- **Kaynak:** CALISANLAR2 (20 kayit) + DEPARTMANLAR (5 kayit)
+- **Hedef:** CALISAN_RAPOR tablosu (Oracle)
+- **Komponentler:** JOIN, FILTER, Expression
+- **KM:** IKM SQL Control Append (LKM gerek yok - ayni DB)
+- **JOIN:** CALISANLAR2.DEPARTMAN_ID = DEPARTMANLAR.DEPARTMAN_ID
+- **FILTER:** CALISANLAR2.MAAS > 5000
+- **Expression'lar:**
+  - AD_SOYAD = CALISANLAR2.AD || ' ' || CALISANLAR2.SOYAD
+  - MAAS_SEVIYE = CASE WHEN MAAS >= 10000 THEN 'Yuksek' WHEN MAAS >= 6000 THEN 'Orta' ELSE 'Dusuk' END
+- **Sonuc:** 15 satir yuklendi (5 kisi maas filtresinde elendi)
+- **Ogrenilenler:**
+  - Kaynak ve hedef ayni DB'deyse LKM gerekmez, sadece IKM yeterli
+  - JOIN komutu Component Palette'den eklenir (ODI 12c)
+  - Expression ile kaynak veride olmayan yeni sutunlar olusturulabilir
+  - Warning (sari ucgen) veri yuklemesini etkilemez, sadece bilgilendirme
