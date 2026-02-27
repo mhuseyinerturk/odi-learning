@@ -38,7 +38,7 @@ odi-learning/
 - [x] Filter, Join, Lookup, Aggregate komponentlerini ogren
 - [x] Expression Editor ile donusum kurallari yaz
 - [x] Farkli Knowledge Module'leri dene (IKM, LKM)
-- [ ] Hata yonetimi ve veri kalite kontrolu (CKM)
+- [x] Hata yonetimi ve veri kalite kontrolu (CKM)
 
 ### Seviye 4 - Is Akislari (Hafta 8-9)
 - [ ] Package olustur (coklu adim is akisi)

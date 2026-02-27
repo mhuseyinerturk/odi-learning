@@ -124,3 +124,17 @@ Mapping calistirirken secilecek KM, verinin nasil tasinacagini belirler:
   - JOIN komutu Component Palette'den eklenir (ODI 12c)
   - Expression ile kaynak veride olmayan yeni sutunlar olusturulabilir
   - Warning (sari ucgen) veri yuklemesini etkilemez, sadece bilgilendirme
+
+### CKM - Veri Kalite Kontrolu (27 Subat 2026)
+- **CKM:** CKM SQL - hedef tablodaki verileri kurallara gore kontrol eder
+- **Condition:** CK_MAAS_KONTROL (MAAS > 0) - Constraints altinda New Condition ile eklenir
+- **E$ Tablosu:** CKM kurala uymayan satirlari E$_CALISAN_RAPOR tablosuna yazar
+- **Sonuc:** 2 kotu kayit tespit edildi (MAAS=0 ve MAAS=-500)
+- **Ogrenilenler:**
+  - CKM, Model seviyesinde Control sekmesinden atanir
+  - Condition, Datastore > Constraints > New Condition ile eklenir
+  - Filter (Static Control) ve Condition ayni anda kullanilamaz - WHERE kosullari celisir
+  - CKM verileri silmez, sadece E$ tablosuna raporlar
+  - Eski E$ tablosu sorun cikarirsa DROP TABLE ile silip CKM'yi tekrar calistir
+  - IKM SQL Control Append sadece INSERT yapar - tabloda ayni PK varsa hata verir
+  - Tekrar calistirmak icin IKM'de TRUNCATE secenegi true yapilmali
