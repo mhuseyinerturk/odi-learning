@@ -41,7 +41,7 @@ odi-learning/
 - [x] Hata yonetimi ve veri kalite kontrolu (CKM)
 
 ### Seviye 4 - Is Akislari (Hafta 8-9)
-- [ ] Package olustur (coklu adim is akisi)
+- [x] Package olustur (coklu adim is akisi)
 - [ ] Degisken (Variable) ve kosullu dallanma kullan
 - [ ] Scenario derle ve calistir
 - [ ] Load Plan ile karmasik is akislari yonet
